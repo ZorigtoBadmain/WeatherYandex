@@ -5,4 +5,28 @@
 //  Created by Зоригто Бадмаин on 22.10.2020.
 //
 
-import Foundation
+import UIKit
+
+extension UIViewController {
+    
+    func alertPlusCity(name: String, placeholder: String, completionHandler: @escaping(String) -> Void) {
+        
+        let alertController = UIAlertController(title: name, message: nil, preferredStyle: .alert)
+        let alertOk = UIAlertAction(title: "OK", style: .destructive) { (action) in
+            let tftext = alertController.textFields?.first
+            guard let text = tftext?.text else { return }
+            completionHandler(text)
+        }
+        
+        alertController.addTextField { (tf) in
+            tf.placeholder = placeholder
+        }
+        
+        let alertCancel = UIAlertAction(title: "Отмена", style: .default, handler: nil)
+        
+        alertController.addAction(alertOk)
+        alertController.addAction(alertCancel)
+        
+        present(alertController, animated: true, completion: nil)
+    }
+}
