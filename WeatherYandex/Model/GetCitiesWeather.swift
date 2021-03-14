@@ -23,7 +23,8 @@ func getCityWeather(citiesArray: [String], completionHandler: @escaping(Int, Wea
     }
 }
 
-func getCoordinateFrom(city: String, completion: @escaping(_ coordinate: CLLocationCoordinate2D?, _ error: Error?) -> () ) {
+func getCoordinateFrom(city: String,
+                       completion: @escaping(_ coordinate: CLLocationCoordinate2D?, _ error: Error?) -> () ) {
     CLGeocoder().geocodeAddressString(city) { (placemark, error) in
         completion(placemark?.first?.location?.coordinate, error)
     }

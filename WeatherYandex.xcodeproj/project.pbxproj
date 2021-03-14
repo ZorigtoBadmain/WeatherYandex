@@ -58,6 +58,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		35746CFD25FE0D4200B168BD /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3527212525412E6400E16926 /* ListTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		35746CFE25FE0D7A00B168BD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				358412FA253FE36D00ECDDFC /* ListTableViewController.swift */,
+				35272128254132F000E16926 /* DetailViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		358412D4253FE1E200ECDDFC = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +96,7 @@
 		358412DF253FE1E200ECDDFC /* WeatherYandex */ = {
 			isa = PBXGroup;
 			children = (
+				35746CFE25FE0D7A00B168BD /* Controller */,
 				358412F7253FE26100ECDDFC /* View */,
 				358412F6253FE25A00ECDDFC /* Model */,
 				358412F5253FE1F900ECDDFC /* Supporting files */,
@@ -105,7 +123,6 @@
 				3527200C25400B2F00E16926 /* WeatherData.swift */,
 				3527200F25400E6400E16926 /* Weather.swift */,
 				35272122254126EA00E16926 /* GetCitiesWeather.swift */,
-				3527212525412E6400E16926 /* ListTableViewCell.swift */,
 				3527212E2541403F00E16926 /* addCity.swift */,
 			);
 			path = Model;
@@ -114,10 +131,9 @@
 		358412F7253FE26100ECDDFC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				35746CFD25FE0D4200B168BD /* Cells */,
 				358412E6253FE1E200ECDDFC /* Main.storyboard */,
 				358412EB253FE1E600ECDDFC /* LaunchScreen.storyboard */,
-				358412FA253FE36D00ECDDFC /* ListTableViewController.swift */,
-				35272128254132F000E16926 /* DetailViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
